@@ -1,0 +1,10 @@
+apiVersion: aadpodidentity.k8s.io/v1
+kind: AzureIdentity
+metadata:
+  name: {{ .Values.azureidentitylabels }}
+  namespace: {{ .Values.namespace }}
+  annotation:
+    "helm.sh/respurce-policy": keep
+spec:
+  clientID: {{ .Values.azureidentityClientID }}
+  resourceID: {{ .Values.azureidentityResourceID }}
