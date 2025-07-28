@@ -112,14 +112,14 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-buffer-size: "128k"
     nginx.ingress.kubernetes.io/proxy-buffers-number: "4"
   hosts:
-    - host: 
-      paths:
-        - path: /
-          pathType: Prefix
-  tls:
-   - secretName: 
+     - host: devaioperator.fnf.com 
+       paths:
+         - path: /
+           pathType: Prefix 
+  tls: 
+   - secretName: devaioperator.fnf.com
      hosts:
-       - 
+       - devaioperator.fnf.com
 
 
 # #new changes for testing
