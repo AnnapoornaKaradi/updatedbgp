@@ -85,7 +85,7 @@ service:
 #   name: goodbye-ingress
 
 ingress:
-  enabled: false #once deployment is successful will make it as true
+  enabled: true #once deployment is successful will make it as true
   className: ""
   annotations: 
     kubernetes.io/ingress.class: sinhbgprocessingress
@@ -113,13 +113,14 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-buffer-size: "128k"
     nginx.ingress.kubernetes.io/proxy-buffers-number: "4"
   hosts:
-    - host: 
-      paths:
-        - path: /
-          pathType: Prefix
-  tls:
-   - secretName: 
+     - host: devaioperator.fnf.com 
+       paths:
+         - path: /
+           pathType: Prefix 
+  tls: 
+   - secretName: devaioperator.fnf.com
      hosts:
+       - devaioperator.fnf.com
        - 
 
 
